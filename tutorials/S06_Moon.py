@@ -17,7 +17,7 @@ import numpy as np
 corto.Utils.clean_scene()
 
 ### (1) DEFINE INPUT ### 
-scenario_name = "S06_Moon" # Name of the scenario folder
+scenario_name = "S06a_Moon" # Name of the scenario folder
 scene_name = "scene.json" # name of the scene input
 geometry_name = "geometry.json" # name of the geometry input
 body_name = "Moon.obj" # name of the body input
@@ -25,8 +25,8 @@ body_name = "Moon.obj" # name of the body input
 # Load inputs and settings into the State object
 State = corto.State(scene = scene_name, geometry = geometry_name, body = body_name, scenario = scenario_name)
 # Add extra inputs 
-State.add_path('albedo_path',os.path.join(State.path["input_path"],'body','albedo','lroc_color_poles_2k.tif'))
-State.add_path('displacement_path',os.path.join(State.path["input_path"],'body','displacement','ldem_4.tif'))
+State.add_path('albedo_path',os.path.join(State.path["input_path"],'body','albedo','lroc_color_poles_32k.tif'))
+State.add_path('displacement_path',os.path.join(State.path["input_path"],'body','displacement','ldem_64.tif'))
 
 ### (2) SETUP THE SCENE ###
 # Setup bodies
